@@ -13,3 +13,18 @@ E:\KULIAH\Smt 6\git\Praktikum PCD\Modul2\obj\Debug\Modul 2.vbproj.CoreCompileInp
 E:\KULIAH\Smt 6\git\Praktikum PCD\Modul2\obj\Debug\Modul2.exe
 E:\KULIAH\Smt 6\git\Praktikum PCD\Modul2\obj\Debug\Modul2.xml
 E:\KULIAH\Smt 6\git\Praktikum PCD\Modul2\obj\Debug\Modul2.pdb
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\bin\Debug\Form1.resx
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\bin\Debug\Form1.vb
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\bin\Debug\Form1.Designer.vb
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\bin\Debug\Modul2.exe.config
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\bin\Debug\Modul2.exe
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\bin\Debug\Modul2.pdb
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\bin\Debug\Modul2.xml
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\Modul 2.vbprojResolveAssemblyReference.cache
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\copas_rgb_cmy.Form1.resources
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\copas_rgb_cmy.Resources.resources
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\Modul 2.vbproj.GenerateResource.cache
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\Modul 2.vbproj.CoreCompileInputs.cache
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\Modul2.exe
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\Modul2.xml
+E:\KULIAH\Smt 6\praktikum pcd\Praktikum PCD\Modul2\obj\Debug\Modul2.pdb

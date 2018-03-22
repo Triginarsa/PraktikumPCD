@@ -226,10 +226,12 @@ Partial Class Form1
         '
         'nilaikecerahan
         '
+        Me.nilaikecerahan.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.nilaikecerahan.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.nilaikecerahan.Font = New System.Drawing.Font("Arial Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nilaikecerahan.Location = New System.Drawing.Point(100, 29)
         Me.nilaikecerahan.Name = "nilaikecerahan"
+        Me.nilaikecerahan.ReadOnly = True
         Me.nilaikecerahan.Size = New System.Drawing.Size(83, 33)
         Me.nilaikecerahan.TabIndex = 37
         '
