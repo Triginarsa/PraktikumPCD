@@ -60,7 +60,7 @@ Partial Class Form1
         Me.B_grayscale.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.B_grayscale.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.B_grayscale.ForeColor = System.Drawing.Color.White
-        Me.B_grayscale.Location = New System.Drawing.Point(283, 317)
+        Me.B_grayscale.Location = New System.Drawing.Point(283, 354)
         Me.B_grayscale.Name = "B_grayscale"
         Me.B_grayscale.Size = New System.Drawing.Size(265, 31)
         Me.B_grayscale.TabIndex = 19
@@ -75,7 +75,7 @@ Partial Class Form1
         Me.B_buka.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.B_buka.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.B_buka.ForeColor = System.Drawing.Color.White
-        Me.B_buka.Location = New System.Drawing.Point(12, 317)
+        Me.B_buka.Location = New System.Drawing.Point(12, 354)
         Me.B_buka.Name = "B_buka"
         Me.B_buka.Size = New System.Drawing.Size(265, 31)
         Me.B_buka.TabIndex = 0
@@ -90,7 +90,7 @@ Partial Class Form1
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.GroupBox1.Location = New System.Drawing.Point(12, 65)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(265, 241)
+        Me.GroupBox1.Size = New System.Drawing.Size(265, 276)
         Me.GroupBox1.TabIndex = 25
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Gambar 1"
@@ -99,7 +99,7 @@ Partial Class Form1
         '
         Me.tampilan1.Location = New System.Drawing.Point(6, 19)
         Me.tampilan1.Name = "tampilan1"
-        Me.tampilan1.Size = New System.Drawing.Size(253, 216)
+        Me.tampilan1.Size = New System.Drawing.Size(250, 250)
         Me.tampilan1.TabIndex = 17
         Me.tampilan1.TabStop = False
         '
@@ -110,7 +110,7 @@ Partial Class Form1
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(283, 65)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(265, 241)
+        Me.GroupBox2.Size = New System.Drawing.Size(265, 276)
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Gambar 2"
@@ -119,7 +119,7 @@ Partial Class Form1
         '
         Me.tampilan2.Location = New System.Drawing.Point(6, 19)
         Me.tampilan2.Name = "tampilan2"
-        Me.tampilan2.Size = New System.Drawing.Size(253, 216)
+        Me.tampilan2.Size = New System.Drawing.Size(250, 250)
         Me.tampilan2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.tampilan2.TabIndex = 18
         Me.tampilan2.TabStop = False
@@ -131,7 +131,7 @@ Partial Class Form1
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(554, 65)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(265, 241)
+        Me.GroupBox3.Size = New System.Drawing.Size(265, 276)
         Me.GroupBox3.TabIndex = 27
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Gambar 3"
@@ -140,7 +140,7 @@ Partial Class Form1
         '
         Me.tampilan3.Location = New System.Drawing.Point(6, 19)
         Me.tampilan3.Name = "tampilan3"
-        Me.tampilan3.Size = New System.Drawing.Size(253, 216)
+        Me.tampilan3.Size = New System.Drawing.Size(250, 250)
         Me.tampilan3.TabIndex = 19
         Me.tampilan3.TabStop = False
         '
@@ -189,7 +189,7 @@ Partial Class Form1
         Me.B_biner.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.B_biner.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.B_biner.ForeColor = System.Drawing.Color.White
-        Me.B_biner.Location = New System.Drawing.Point(554, 317)
+        Me.B_biner.Location = New System.Drawing.Point(554, 354)
         Me.B_biner.Name = "B_biner"
         Me.B_biner.Size = New System.Drawing.Size(265, 31)
         Me.B_biner.TabIndex = 32
@@ -203,7 +203,7 @@ Partial Class Form1
         Me.GB_brightness.Controls.Add(Me.B_kb)
         Me.GB_brightness.Controls.Add(Me.B_tb)
         Me.GB_brightness.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GB_brightness.Location = New System.Drawing.Point(283, 354)
+        Me.GB_brightness.Location = New System.Drawing.Point(283, 391)
         Me.GB_brightness.Name = "GB_brightness"
         Me.GB_brightness.Size = New System.Drawing.Size(265, 85)
         Me.GB_brightness.TabIndex = 34
@@ -271,7 +271,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(830, 451)
+        Me.ClientSize = New System.Drawing.Size(830, 492)
         Me.Controls.Add(Me.GB_brightness)
         Me.Controls.Add(Me.B_biner)
         Me.Controls.Add(Me.T_Ulang)
