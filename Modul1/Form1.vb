@@ -1,10 +1,10 @@
 ﻿
 Public Class Form1
-    Dim w As New Integer 'membuat variabel w dengan tipe integer
-    Dim h As New Integer 'membuat variabel h dengan tipe integer
-    Dim x As Integer 'membuat variabel x dengan tipe integer
-    Dim y As Integer 'membuat variabel y dengan tipe integer
-    Dim a, r, g, b As Integer 'membuat variabel a,r,g,b dengan tipe integer
+    Dim w As New Integer
+    Dim h As New Integer
+    Dim x As Integer
+    Dim y As Integer
+    Dim a, r, g, b As Integer
 
 
     Private Sub buka_Click(sender As Object, e As EventArgs) Handles buka.Click 'jika tombol buka di klik maka akan menjalankan script
