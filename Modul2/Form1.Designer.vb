@@ -36,8 +36,9 @@ Partial Class Form1
         Me.T_Keluar = New System.Windows.Forms.PictureBox()
         Me.B_biner = New System.Windows.Forms.Button()
         Me.GB_brightness = New System.Windows.Forms.GroupBox()
-        Me.nilaikecerahan = New System.Windows.Forms.NumericUpDown()
         Me.TB_kecerahan = New System.Windows.Forms.TrackBar()
+        Me.temp = New System.Windows.Forms.PictureBox()
+        Me.nilaikecerahan = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.tampilan1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -47,8 +48,8 @@ Partial Class Form1
         CType(Me.T_Ulang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.T_Keluar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GB_brightness.SuspendLayout()
-        CType(Me.nilaikecerahan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TB_kecerahan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.temp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'B_grayscale
@@ -116,7 +117,7 @@ Partial Class Form1
         '
         'tampilan2
         '
-        Me.tampilan2.Location = New System.Drawing.Point(6, 19)
+        Me.tampilan2.Location = New System.Drawing.Point(9, 19)
         Me.tampilan2.Name = "tampilan2"
         Me.tampilan2.Size = New System.Drawing.Size(250, 250)
         Me.tampilan2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -197,8 +198,8 @@ Partial Class Form1
         '
         'GB_brightness
         '
-        Me.GB_brightness.Controls.Add(Me.TB_kecerahan)
         Me.GB_brightness.Controls.Add(Me.nilaikecerahan)
+        Me.GB_brightness.Controls.Add(Me.TB_kecerahan)
         Me.GB_brightness.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GB_brightness.Location = New System.Drawing.Point(12, 391)
         Me.GB_brightness.Name = "GB_brightness"
@@ -206,15 +207,6 @@ Partial Class Form1
         Me.GB_brightness.TabIndex = 34
         Me.GB_brightness.TabStop = False
         Me.GB_brightness.Text = "Brightness"
-        '
-        'nilaikecerahan
-        '
-        Me.nilaikecerahan.Location = New System.Drawing.Point(743, 21)
-        Me.nilaikecerahan.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
-        Me.nilaikecerahan.Minimum = New Decimal(New Integer() {255, 0, 0, -2147483648})
-        Me.nilaikecerahan.Name = "nilaikecerahan"
-        Me.nilaikecerahan.Size = New System.Drawing.Size(55, 26)
-        Me.nilaikecerahan.TabIndex = 32
         '
         'TB_kecerahan
         '
@@ -225,6 +217,27 @@ Partial Class Form1
         Me.TB_kecerahan.Size = New System.Drawing.Size(795, 45)
         Me.TB_kecerahan.TabIndex = 33
         '
+        'temp
+        '
+        Me.temp.Location = New System.Drawing.Point(-70, -204)
+        Me.temp.Name = "temp"
+        Me.temp.Size = New System.Drawing.Size(250, 250)
+        Me.temp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.temp.TabIndex = 35
+        Me.temp.TabStop = False
+        Me.temp.Visible = False
+        '
+        'nilaikecerahan
+        '
+        Me.nilaikecerahan.AutoSize = True
+        Me.nilaikecerahan.ForeColor = System.Drawing.Color.Black
+        Me.nilaikecerahan.Location = New System.Drawing.Point(6, 27)
+        Me.nilaikecerahan.Name = "nilaikecerahan"
+        Me.nilaikecerahan.Size = New System.Drawing.Size(224, 19)
+        Me.nilaikecerahan.TabIndex = 34
+        Me.nilaikecerahan.Text = "Penambahan Brightness = 0"
+        Me.nilaikecerahan.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
@@ -232,6 +245,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(830, 508)
+        Me.Controls.Add(Me.temp)
         Me.Controls.Add(Me.GB_brightness)
         Me.Controls.Add(Me.B_biner)
         Me.Controls.Add(Me.T_Ulang)
@@ -259,8 +273,8 @@ Partial Class Form1
         CType(Me.T_Keluar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GB_brightness.ResumeLayout(False)
         Me.GB_brightness.PerformLayout()
-        CType(Me.nilaikecerahan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TB_kecerahan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.temp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -279,5 +293,6 @@ Partial Class Form1
     Friend WithEvents B_biner As Button
     Friend WithEvents GB_brightness As GroupBox
     Friend WithEvents TB_kecerahan As TrackBar
-    Friend WithEvents nilaikecerahan As NumericUpDown
+    Friend WithEvents temp As PictureBox
+    Friend WithEvents nilaikecerahan As Label
 End Class

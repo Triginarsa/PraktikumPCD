@@ -7,6 +7,7 @@ Public Class Form1
     Dim a, r, g, b As Integer 'membuat variabel a,r,g,b dengan tipe integer
     Dim kecerahan As Integer
     Dim validasi As Integer
+    Dim v_gray As Integer
 
 
     Private Sub buka_Click(sender As Object, e As EventArgs) Handles B_buka.Click 'jika tombol buka di klik maka akan menjalankan script
@@ -24,6 +25,8 @@ Public Class Form1
     Private Sub B_grayscale_Click(sender As Object, e As EventArgs) Handles B_grayscale.Click
         If IsNothing(tampilan1.Image) Then 'membuat premis jika picbo tampilan2 tidak memuat gambar maka
             MessageBox.Show("Buka Gambar Terlebih Dahulu!", "Gagal Melakukan Grayscale", MessageBoxButtons.OK, MessageBoxIcon.Warning) 'mengeluarkan pesan dan memberi tombol OK serta memunculkan ikon warning
+        ElseIf (v_gray = 1) Then 'membuat premis jika picbo tampilan2 tidak memuat gambar maka
+            MessageBox.Show("Gambar Sudah di Grayscale!", "Gagal Melakukan Grayscale", MessageBoxButtons.OK, MessageBoxIcon.Warning) 'mengeluarkan pesan dan memberi tombol OK serta memunculkan ikon warning
         Else 'atau
             If validasi = 1 Then
                 tampilan2.Image = tampilan1.Image.Clone
@@ -43,7 +46,8 @@ Public Class Form1
                 Next x 'perulangan dilanjutkan sampai ke x
             Next y 'perulangan dilanjutkan sampai ke y
             tampilan2.Image = gambarhitamputih 'mendeklarasikan bahwa picbox tampilan3 memuat image dari variabel gambarfilter
-            validasi = 0
+            validasi = 2
+            v_gray = 1
         End If
     End Sub
 
@@ -74,68 +78,32 @@ Public Class Form1
 
     End Sub
 
-    Private Sub nilaikecerahan_ValueChanged(sender As Object, e As EventArgs) Handles nilaikecerahan.ValueChanged
-        nilaikecerahan.Maximum = 255
-        nilaikecerahan.Minimum = -255
-        If IsNothing(tampilan1.Image) Then 'membuat premis jika picbox tampilan2 tidak memuat gambar maka
-            MessageBox.Show("Buka Gambar Terlebih Dahulu!", "Gagal Menegatifkan", MessageBoxButtons.OK, MessageBoxIcon.Warning) 'mengeluarkan pesan dan memberi tombol OK serta memunculkan ikon warning
-        Else 'atau
-            If validasi = 1 Then
-                tampilan2.Image = tampilan1.Image.Clone
-            End If
-            w = tampilan2.ClientSize.Width 'mendeklarasikan bahwa w adalah lebar dari ukuran gambar yang berada di picbox tampilan1
-            h = tampilan2.ClientSize.Height 'mendeklarasikan bahwa h adalah tinggi dari ukuran gambar yang berada di picbox tampilan1
-            Dim gambarcerah As New Bitmap(w, h) 'mendeklarasikan variabel gambarcerah sebagai tempat menyimpan nilai w dan h
-            tampilan2.DrawToBitmap(gambarcerah, tampilan2.ClientRectangle)
-            tampilan2.Image = gambarcerah
-            TB_kecerahan.Value = nilaikecerahan.Value
-
-            For Me.y = 0 To h - 1 'perulangan jika y = 0 menuju variabel h yang tingginya - 1 (karena koordinat 0 juga di hitung sehingga -1)
-                For Me.x = 0 To w - 1 'perulangan jika x = 0 menuju variabel w yang lebarnya - 1 (karena koordinat 0 juga di hitung sehingga -1
-                    Dim merah As Integer = gambarcerah.GetPixel(x, y).R
-                    Dim hijau As Integer = gambarcerah.GetPixel(x, y).G
-                    Dim biru As Integer = gambarcerah.GetPixel(x, y).B
-
-                    merah = merah + TB_kecerahan.Value
-                    hijau = hijau + TB_kecerahan.Value
-                    biru = biru + TB_kecerahan.Value
-
-                    If merah > 255 Then merah = 255
-                    If hijau > 255 Then hijau = 255
-                    If biru > 255 Then biru = 255
-
-                    If merah < 0 Then merah = 0
-                    If hijau < 0 Then hijau = 0
-                    If biru < 0 Then biru = 0
-
-                    gambarcerah.SetPixel(x, y, Color.FromArgb(merah, hijau, biru))
-                Next x 'perulangan dilanjutkan sampai ke x
-            Next y 'perulangan dilanjutkan sampai ke y
-            validasi = 0
-        End If
-    End Sub
-
     Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TB_kecerahan.Scroll
         TB_kecerahan.Maximum = 255
         TB_kecerahan.Minimum = -255
+
         If IsNothing(tampilan1.Image) Then 'membuat premis jika picbox tampilan2 tidak memuat gambar maka
             MessageBox.Show("Buka Gambar Terlebih Dahulu", "Gagal Mencerahkan", MessageBoxButtons.OK, MessageBoxIcon.Warning) 'mengeluarkan pesan dan memberi tombol OK serta memunculkan ikon warning
         Else 'atau
+            w = temp.ClientSize.Width 'mendeklarasikan bahwa w adalah lebar dari ukuran gambar yang berada di picbox tampilan1
+            h = temp.ClientSize.Height 'mendeklarasikan bahwa h adalah tinggi dari ukuran gambar yang berada di picbox tampilan1
+            Dim gambartemp As New Bitmap(w, h) 'mendeklarasikan variabel gambarcerah sebagai tempat menyimpan nilai w dan h
             If validasi = 1 Then
-                tampilan2.Image = tampilan1.Image.Clone
+                temp.Image = tampilan1.Image.Clone
+            ElseIf validasi = 2 Then
+                temp.Image = tampilan2.Image.Clone
+                validasi = 0
             End If
-            nilaikecerahan.Value = TB_kecerahan.Value
-            w = tampilan2.ClientSize.Width 'mendeklarasikan bahwa w adalah lebar dari ukuran gambar yang berada di picbox tampilan1
-            h = tampilan2.ClientSize.Height 'mendeklarasikan bahwa h adalah tinggi dari ukuran gambar yang berada di picbox tampilan1
-            Dim gambarcerah As New Bitmap(w, h) 'mendeklarasikan variabel gambarcerah sebagai tempat menyimpan nilai w dan h
-            tampilan2.DrawToBitmap(gambarcerah, tampilan2.ClientRectangle)
-            tampilan2.Image = gambarcerah
+            nilaikecerahan.Text = "Penambahan Brightness = " + Convert.ToString(TB_kecerahan.Value)
+            temp.DrawToBitmap(gambartemp, temp.ClientRectangle)
+            temp.Image = gambartemp
+            Dim gambarcerahfix As New Bitmap(w, h) 'mendeklarasikan variabel gambarcerah sebagai tempat menyimpan nilai w dan h
 
             For Me.y = 0 To h - 1 'perulangan jika y = 0 menuju variabel h yang tingginya - 1 (karena koordinat 0 juga di hitung sehingga -1)
                 For Me.x = 0 To w - 1 'perulangan jika x = 0 menuju variabel w yang lebarnya - 1 (karena koordinat 0 juga di hitung sehingga -1
-                    Dim merah As Integer = gambarcerah.GetPixel(x, y).R
-                    Dim hijau As Integer = gambarcerah.GetPixel(x, y).G
-                    Dim biru As Integer = gambarcerah.GetPixel(x, y).B
+                    Dim merah As Integer = gambartemp.GetPixel(x, y).R
+                    Dim hijau As Integer = gambartemp.GetPixel(x, y).G
+                    Dim biru As Integer = gambartemp.GetPixel(x, y).B
 
                     merah = merah + TB_kecerahan.Value
                     hijau = hijau + TB_kecerahan.Value
@@ -149,9 +117,10 @@ Public Class Form1
                     If hijau < 0 Then hijau = 0
                     If biru < 0 Then biru = 0
 
-                    gambarcerah.SetPixel(x, y, Color.FromArgb(merah, hijau, biru))
+                    gambarcerahfix.SetPixel(x, y, Color.FromArgb(merah, hijau, biru))
                 Next x 'perulangan dilanjutkan sampai ke x
             Next y 'perulangan dilanjutkan sampai ke y
+            tampilan2.Image = gambarcerahfix 'mendeklarasikan bahwa picbox tampilan3 memuat image dari variabel gambarfilter
             validasi = 0
         End If
     End Sub
@@ -165,8 +134,9 @@ Public Class Form1
 
     Private Sub T_ulang_Click(sender As Object, e As EventArgs) Handles T_Ulang.Click
         Controls.Clear() 'untuk menghapus semua control yang ada
-        nilaikecerahan.Value = 0
+        nilaikecerahan.Text = "Penambahan Brightness = 0"
         validasi = 0
+        v_gray = 0
         InitializeComponent() 'untuk memuat kembali componen-componen yang ada pada form
     End Sub
 
